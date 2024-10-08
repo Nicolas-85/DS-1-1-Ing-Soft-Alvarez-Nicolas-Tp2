@@ -1,0 +1,142 @@
+/* ---------- normalizo los estilos de los documentos ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*manejo el tamaño de las cajas ajustadas al norde y no al contenido*/
+}
+
+/* ---------- Utilizo variables para colores y fuentes --------------- */
+:root {
+    --color-bg-azul: #0759db; /* Celeste claro */
+    --color-bg-celeste: #a6dcf5;   /* Celeste degradé */
+    --color-primario: #ae58eb;  /* Violeta */
+    --color-secundario: #f568cd; /* Rosa pastel */
+    --color-blanco-base: #ffffff;
+    --color-blanco-alternativo: #ffffffcc;
+    --color-fuente-base: #333;
+    --fuente-base: 'JetBrains Mono', monospace;
+}
+
+/* ---------- establezco estilos para todo el body ------------------- */
+body {
+    font-family: var(--fuente-base);
+    background: linear-gradient(150deg, var(--color-bg-azul), var(--color-bg-celeste)); /*Le doy el degragé al fondo*/
+    color: var(--color-fuente-base); /*color de letra para el documento*/
+    min-height: 100vh;/*le doy una altura mínima al body para controlar el posicionamiento del footer.*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ---------- Estilos del Header ------ */
+header {
+    background-color: var(--color-primario);
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco-base);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* ---------- Enlaces o redireccionamiento ---------- */
+a {
+    color: var(--color-blanco-base);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    box-shadow: 10px 5px 5px var(--color-bg-azul);
+}
+
+/* ---------- Títulos y parrafos --- */
+.contenedorTitulo {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.contenedorTitulo span {
+    font-style: oblique;
+}
+
+.contenedorParrafo {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--color-secundario);
+    background-color: var(--color-blanco-alternativo);
+}
+
+/* ---------- Currículo ----------------*/
+.contenedorCv {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.contenedorCv img{
+    max-width: 595px; /* le doy el ancho máximo que puede tener una hoja A4 */
+    height: 750px;
+    border-radius: 5px;
+    border: 2px solid var(--color-secundario);
+}
+
+/* ---------- Formulario ------------- */
+.contenedorGralFormulario {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contenedorFormulario {
+    display: inline-block;
+    text-align: left;
+    width: 500px;
+    padding: 10px;
+    background-color: var(--color-bg-celeste);
+    border: 2px solid var(--color-secundario);
+    border-radius: 10px;
+}
+
+.contenedorGrupoFormulario {
+    margin-bottom: 5px;
+}
+
+.contenedorGrupoFormulario label {
+    display: block;
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+
+.contenedorGrupoFormulario input, 
+.contenedorGrupoFormulario select,
+.contenedorGrupoFormulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--color-primario);
+    color: var(--color-blanco-base);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+}
+
