@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.CSS">
+    <title>D. S. 1° - 1°: Ing. de Software - TP 2.</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="AlvarezNicolas.HTML">Inicio</a></li>
+                <li><a href="expectativas.html">Expectativas</a></li>
+                <li><a href="historia.HTML">Historia</a></li>
+                <li><a href="trabajo.html">Trabajo Práctico</a></li>
+                <li><a href="cv.html">Curriculum Vitae</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contenedorTotalCambiarVisibilidad">
+        <input type="checkbox" name="palanca" id="palanca" class="checkBox">
+        <label for="palanca" class="boton">Contacto</label>
+        <div class="contenedorTitulo">
+            <h2>Bienvenidos a mi Sitio Web</h2>
+            <div class="contenedorParrafo">
+                <p>Este sitio está creado con HTML y CSS sin la utilización de frameworks. La finalidad de este proyecto es la de cumplir con las consignas del segundo trabajo práctico de la materia Ingeniería de Software I, de la carrera Técnico Superior en Desarrollo de Software del Terciario Urquiza, de la ciudad de Rosario, Argentina. 
+                    En el márgen inferior izquierdo se encuetra un botón para poder acceder a un formulario de contacto para dejarme tu comentario, sugerencia o reclamo.</p>
+            </div>
+        </div>
+        <div class="contenedorGralFormulario">
+            <h2>Contacto</h2>
+            <form class="contenedorFormulario">
+                <div class="contenedorGrupoFormulario">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" placeholder="Escribe tu nombre" required>
+                </div>
+                
+                <div class="contenedorGrupoFormulario">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" placeholder="Escribe tu correo" required>
+                </div>
+
+                <div class="contenedorGrupoFormulario">
+                    <label for="nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="nacimiento" required>
+                </div>
+                
+                <div class="contenedorGrupoFormulario">
+                    <label>Motivo de la consulta:</label>
+                    <select required>
+                        <option value="" disabled selected>Selecciona un motivo</option>
+                        <option value="general">Consulta General</option>
+                        <option value="soporte">Reclamo</option>
+                        <option value="sugerencia">Sugerencia</option>
+                    </select>
+                </div>
+
+                <div class="contenedorGrupoFormulario">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea rows="3" id="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 - Nicolás Martín Alvarez. Mis redes sociales: <a target="_blank" href="https://github.com/Nicolas-85">GitHub</a> | <a target="_blank" href="https://www.linkedin.com/in/nicoalvarez19/">LinkedIn</a> | <a target="_blank" href="https://www.instagram.com/nico.m.a/">Instagram</a></p>
+    </footer>
+</body>
+</html>

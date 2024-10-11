@@ -1,34 +1,31 @@
-/* ---------- normalizo los estilos de los documentos ------------------ */
+/* ---------- normalizo los estilos del documento ---------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;/*manejo el tamaño de las cajas ajustadas al norde y no al contenido*/
 }
 
-/* ---------- Utilizo variables para colores y fuentes --------------- */
+/* ---------- Utilizo variables para colores y fuentes ---------- */
 :root {
-    --color-bg-azul: #0759db; /* Celeste claro */
-    --color-bg-celeste: #a6dcf5;   /* Celeste degradé */
-    --color-primario: #ae58eb;  /* Violeta */
-    --color-secundario: #f568cd; /* Rosa pastel */
+    --color-bg-azul: #0759db; 
+    --color-bg-celeste: #a6dcf5;
+    --color-primario: #ae58eb;  
+    --color-secundario: #f568cd;
     --color-blanco-base: #ffffff;
     --color-blanco-alternativo: #ffffffcc;
     --color-fuente-base: #333;
     --fuente-base: 'JetBrains Mono', monospace;
 }
 
-/* ---------- establezco estilos para todo el body ------------------- */
-body {
+/* ---------- establezco estilos para todo el documento ---------- */
+html {
     font-family: var(--fuente-base);
     background: linear-gradient(150deg, var(--color-bg-azul), var(--color-bg-celeste)); /*Le doy el degragé al fondo*/
     color: var(--color-fuente-base); /*color de letra para el documento*/
-    min-height: 100vh;/*le doy una altura mínima al body para controlar el posicionamiento del footer.*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    min-height: 100vh; /*le doy una altura mínima al body para controlar el degradé.*/
 }
 
-/* ---------- Estilos del Header ------ */
+/* ---------- Estilos del Header ---------- */
 header {
     background-color: var(--color-primario);
     padding: 20px;
@@ -43,6 +40,10 @@ nav ul {
 /* ---------- Footer ---------- */
 footer {
     background-color: var(--color-primario);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
     color: var(--color-blanco-base);
     text-align: center;
     padding: 20px;
@@ -52,18 +53,20 @@ footer {
 /* ---------- Enlaces o redireccionamiento ---------- */
 a {
     color: var(--color-blanco-base);
+    border-radius: 6px;
+    padding: 2px;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover{
-    box-shadow: 10px 5px 5px var(--color-bg-azul);
+    box-shadow: 1px 2px 65px 3px var(--color-bg-azul);
 }
 
-/* ---------- Títulos y parrafos --- */
+/* ---------- Títulos y parrafos ---------- */
 .contenedorTitulo {
     text-align: center;
-    margin: 50px 0;
+    margin: 30px 0 0;
 }
 
 .contenedorTitulo span {
@@ -71,18 +74,20 @@ a:hover{
 }
 
 .contenedorParrafo {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto 70px;
     padding: 20px;
     border-radius: 5px;
     border: 2px solid var(--color-secundario);
     background-color: var(--color-blanco-alternativo);
+    text-align: left;
 }
 
-/* ---------- Currículo ----------------*/
+/* ---------- Currículo ---------- */
 .contenedorCv {
     text-align: center;
-    margin: 30px 0;
+    margin: 30px 0 65px;
+
 }
 
 .contenedorCv img{
@@ -91,11 +96,42 @@ a:hover{
     border-radius: 5px;
     border: 2px solid var(--color-secundario);
 }
+/* ---------- Cambio de visibilidad formulario ---------- */
+.boton{
+    background-color: var(--color-primario);
+    color: var(--color-blanco-alternativo);
+    position: absolute;
+    margin-left: 5px;
+    bottom: 65px;
+    padding: 10px;
+    border-radius: 5px;
+}
 
-/* ---------- Formulario ------------- */
+.boton:hover{
+    background-color: var(--color-secundario);
+}
+
+.checkBox{
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .contenedorTitulo {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .contenedorGralFormulario {
+    display: block;
+}
+
+/* ---------- Formulario ---------- */
+.contenedorBotonFormulario{
+    margin-top: 30px;
+}
+
 .contenedorGralFormulario {
     text-align: center;
-    margin: 20px 0;
+    margin-top: 25px ;
+    display: none;
 }
 
 .contenedorFormulario {
@@ -126,17 +162,3 @@ a:hover{
     border: 1px solid var(--color-secundario);
     border-radius: 5px;
 }
-
-button {
-    background-color: var(--color-primario);
-    color: var(--color-blanco-base);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: var(--color-secundario);
-}
-
